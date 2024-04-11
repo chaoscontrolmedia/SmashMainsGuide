@@ -1,0 +1,204 @@
+h1, h2, h3{
+    font-weight: normal;
+}
+
+.coda-regular {
+    font-family: "Coda", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .coda-extrabold {
+    font-family: "Coda", system-ui;
+    font-weight: 800;
+    font-style: normal;
+  }
+
+
+html{
+    font-family: "Coda";
+    background: rgb(29,36,54);
+    background: radial-gradient(circle, rgba(29,36,54,1) 0%, rgba(21,24,32,1) 50%, rgba(0,0,0,1) 100%);
+    color:white;
+    
+}
+#openModalBtn{
+  padding: 1%;
+  background: gray;
+  cursor:pointer;
+}
+
+
+.section-flex{
+    display: flex;
+    flex: 1;
+    border: 0.5px solid rgb(255, 255, 255);
+  }
+
+  .section-overview{
+
+   
+    border-top : 0;
+    border-right:1px solid rgb(255, 255, 255);
+    border-bottom : 0;
+    padding : 0.5%;
+    flex: 1 1 30%; /* Updated to 30% */
+  }
+
+
+  .section-strategy{
+    border-top: 0;
+    border-right: 0;
+    padding: 1%;
+    padding-top: 0;
+    flex: 1 1 70%;
+  }
+
+
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    text-align: center;
+    }
+    
+    .modal-content {
+      text-align: center;
+     
+    background-color: #151324;
+    color: rgb(255, 255, 255);
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    animation-name: modalopen;
+    animation-duration: 0.4s;
+    }
+
+
+    .flex-modal-content{
+      display: flex;
+      text-align: center;
+      justify-content: center; /* Center the content horizontally */
+      flex-grow: 1; /* Take up available space */
+    }
+    .modal-header{
+      text-align: center;
+      color: rgb(192, 192, 192);
+    }
+
+    .modal-content h2 {
+      text-align: center;
+  }
+    
+    @keyframes modalopen {
+    from {opacity: 0}
+    to {opacity: 1}
+    }
+    
+    .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    }
+
+    ul {
+      list-style-type: none;/* Remove bullets */
+      width:90%; /*actually controls thew width of the content*/
+      }
+
+
+/*
+.mains{
+    background: gray;
+    display: grid;
+    grid-auto-flow: column; 
+    grid-template-columns: 50% 50%;
+    gap: 10%;
+    
+    
+}
+*/
+.mains {
+    display: flex; /* Use flexbox to arrange columns horizontally */
+    flex-wrap: nowrap; /* Prevent columns from wrapping to the next line */
+}
+
+
+.purpose{
+    background: purple;
+}
+.purpose,
+.mains {
+    width: 100%;
+}
+
+.container {
+    display: flex;/*allows for no gaps*/
+    flex-direction: column;/*lets divs sit right on top of each other*/
+}
+
+
+.mains-column{
+    border: 1px solid;
+    margin: 0;
+    flex: 1; /* Distribute available space equally among columns */
+    box-sizing: border-box; /* Include border in the width */
+}
+
+.mains-column img {
+    width: 100%; /* Make images fill their parent container */
+    display: block; /* Remove default inline-block spacing */
+}
+
+
+.purpose, .mains-column{
+  text-align: center;
+}
+
+.mains-column{
+  text-decoration:none;
+}
+
+/* Regular link styling */
+a {
+color: rgb(144, 245, 249); /* Default link color */
+text-decoration: none; /* Remove underline */
+transition: transform 0.5s ease; /* Smooth transition effect */
+}
+
+/* Visited link styling */
+a:visited {
+color: rgb(118, 200, 251); /* Color for visited links */
+}
+
+/* Hover link styling */
+a:hover {
+color: rgb(206, 131, 253); /* Color when hovered over */
+text-decoration: none; /* Remove underline */
+
+}
+
+
+
+
+
+
+
+

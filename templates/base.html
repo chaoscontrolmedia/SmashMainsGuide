@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <!--
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">-->
+
+    <!--<link rel="stylesheet" href="/static/style.css">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+    
+    <title>{% block title%}{%endblock%}</title>
+</head>
+<body>
+
+
+
+    <div class="mains">
+
+    
+        <div class="mains-column">
+            <a href="{{ url_for('mario_page') }}">
+                <h2>Mario</h2>
+                <img src="{{url_for('static', filename='img/mario.jpg')}}" width="100%">
+            </a>
+        </div>
+    
+    
+        <div class="mains-column">
+            <a href="{{ url_for('fox_page') }}">
+                <h2>Fox</h2>
+                <img src="{{ url_for('static', filename='img/fox.jpg') }}" width="100%">
+            </a>
+        </div>
+        
+        <div class="mains-column">
+            <a href="{{ url_for('chrom_page') }}">
+                <h2>Chrom</h2>
+                <img src="{{ url_for('static', filename='img/chrom.jpg') }}" width="100%">
+            </a>
+        </div>
+        
+        <div class="mains-column">
+            <a href="{{ url_for('wolf_page') }}">
+                <h2>Wolf</h2>
+                <img src="{{ url_for('static', filename='img/wolf.jpg') }}" width="100%">
+            </a>
+        </div>
+        
+        <div class="mains-column">
+            <a href="{{ url_for('little_mac_page') }}">
+                <h2>Little Mac</h2>
+                <img src="{{ url_for('static', filename='img/littlemac.jpg') }}" width="100%">
+            </a>
+        </div>
+        
+        <div class="mains-column">
+            <a href="{{ url_for('sephiroth_page') }}">
+                <h2>Sephiroth</h2>
+                <img src="{{ url_for('static', filename='img/sephiroth.jpg') }}" width="100%">
+            </a>
+        </div>
+        
+    </div>
+
+
+
+
+
+
+</div>
+
+
+{% block content %}
+<!-- This is where the overview content will be dynamically inserted -->
+{% endblock %}
+
+    <!--Make sure all JS runs before this script-->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+
+
+
+
+
+</html>
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

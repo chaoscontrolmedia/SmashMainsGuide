@@ -1,0 +1,89 @@
+{% extends 'base.html'%}
+
+{% block title %}
+Fox Page
+{% endblock %}
+
+
+
+
+        
+{% block content %}
+<div class="section-flex">
+<div class="section-overview">
+<h1>{{ fighter.fighter_name() }} page</h1>
+
+{% if fighter %}
+    <h2>Fighter Details:</h2>
+    <p><strong>Strengths:</strong> {{ fighter.fighter_strengths() }}</p>
+    <p><strong>Weaknesses:</strong> {{ fighter.fighter_weaknesses() }}</p>
+        <!-- Button to open the modal -->
+    <button id="openModalBtn"><h1>Moveset</h1></button>
+    
+{% else %}
+    <p>No fighter found with the name 'Fox'.</p>
+{% endif %}
+</div>
+
+
+<div class="section-strategy">
+<h2>Overview</h2>
+<h3>{{overview}}</h3>
+</div>
+</div>
+
+    
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+
+<!-- Modal content -->
+<div class="modal-content">
+  <span class="close">&times;</span>
+  <h1 class="modal-header">{{ fighter.name }}'s Moveset</h1>
+  <h2>Will add animations soon</h2>
+  
+  
+
+  
+  <div class="flex-modal-content">
+  
+  <ul>
+      <h3>Ground Moves</h3>
+      {% for move in ground_moves %}
+          <li>{{ move }}</li>
+      {% endfor %}
+  </ul>
+  
+  
+  <ul>
+      <h3>Aerial Moves</h3>
+      {% for move in aerial_moves %}
+          <li>{{ move }}</li>
+      {% endfor %}
+  </ul>
+  
+  
+  <ul>
+      <h3>Special Moves</h3>
+      {% for move in special_moves %}
+          <li>{{ move }}</li>
+      {% endfor %}
+  </ul>
+  
+  
+  <ul>
+      <h3>Grab Throws</h3>
+      {% for move in grab_throws %}
+          <li>{{ move }}</li>
+      {% endfor %}
+  </ul>
+
+  </div>
+  
+</div>
+
+
+</div>
+</div>
+{% endblock %}
